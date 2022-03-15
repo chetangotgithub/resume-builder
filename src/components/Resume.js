@@ -45,8 +45,8 @@ const Resume = () => {
           >
             <Box
               sx={{
-                // backgroundImage:
-                //   "-webkit-linear-gradient(65deg, #FFF 50%, #0F044C 50%);",
+                backgroundImage:
+                  "-webkit-linear-gradient(65deg, #FFF 50%, #0F044C 50%);",
                 // background:
                 //   "linear-gradient(10deg, #3f51b5 0, #3f51b5 33%, #ffffff 33%, #ffffff 66%, #3f51b5 66%, #3f51b5 100%);",
                 // backgroundImage:
@@ -91,8 +91,8 @@ const Resume = () => {
             <Box
               sx={{
                 // backgroundColor: "red",
-                // backgroundImage:
-                //   "-webkit-linear-gradient(253deg, #FFF 50%, #0F044C 50%);",
+                backgroundImage:
+                  "-webkit-linear-gradient(253deg, #FFF 50%, #0F044C 50%);",
                 height: "20vh",
               }}
             >
