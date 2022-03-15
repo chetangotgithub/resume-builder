@@ -1,7 +1,15 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Resume from "./components/Resume";
 
 const App = () => {
-  return <div>App</div>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<Resume />} />
+      </Routes>
+    </BrowserRouter>
+  );
 };
 
 export default App;
