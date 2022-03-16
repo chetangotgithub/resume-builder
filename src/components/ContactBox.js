@@ -31,7 +31,7 @@ const ContactBox = () => {
           borderBottom: "3px solid #0F044C",
           width: "40px",
           paddingTop: "4px",
-          marginBottom: 1,
+          marginBottom: 0.5,
         }}
       />
       <List>

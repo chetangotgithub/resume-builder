@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  Avatar,
-  Box,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Typography,
-} from "@mui/material";
-import { LocationOn, Mail, Phone } from "@mui/icons-material";
+import { Box, LinearProgress, List, ListItem, Typography } from "@mui/material";
 
 const SkillsBox = () => {
   return (
@@ -31,42 +22,53 @@ const SkillsBox = () => {
           borderBottom: "3px solid #0F044C",
           width: "40px",
           paddingTop: "4px",
-          marginBottom: 1,
+          marginBottom: 0.5,
         }}
       />
       <List>
         <ListItem sx={{ padding: 0 }}>
-          <ListItemIcon sx={{ minWidth: "22px" }}>
-            <Avatar sx={{ width: "16px", height: "16px", bgcolor: "#aa7d55" }}>
-              <Phone sx={{ width: "12px", height: "12px" }} />
-            </Avatar>
-          </ListItemIcon>
-          <ListItemText
-            primary="+91 9999999999"
-            primaryTypographyProps={{ fontSize: 10 }}
-          />
+          <Box sx={{ marginBottom: 1 }}>
+            <Typography sx={{ fontSize: "10px" }}>Something</Typography>
+            <LinearProgress
+              variant="determinate"
+              value={75}
+              color="inherit"
+              sx={{ mt: 0.5, height: 4, width: "100px" }}
+            />
+          </Box>
         </ListItem>
         <ListItem sx={{ padding: 0 }}>
-          <ListItemIcon sx={{ minWidth: "22px" }}>
-            <Avatar sx={{ width: "16px", height: "16px", bgcolor: "#aa7d55" }}>
-              <Mail sx={{ width: "12px", height: "12px" }} />
-            </Avatar>
-          </ListItemIcon>
-          <ListItemText
-            primary="student@email.com"
-            primaryTypographyProps={{ fontSize: 10 }}
-          />
+          <Box sx={{ marginBottom: 1 }}>
+            <Typography sx={{ fontSize: "10px" }}>Something</Typography>
+            <LinearProgress
+              variant="determinate"
+              value={75}
+              color="inherit"
+              sx={{ mt: 0.5, height: 4, width: "100px" }}
+            />
+          </Box>
         </ListItem>
         <ListItem sx={{ padding: 0 }}>
-          <ListItemIcon sx={{ minWidth: "22px" }}>
-            <Avatar sx={{ width: "16px", height: "16px", bgcolor: "#aa7d55" }}>
-              <LocationOn sx={{ width: "12px", height: "12px" }} />
-            </Avatar>
-          </ListItemIcon>
-          <ListItemText
-            primary="Mumbai, India"
-            primaryTypographyProps={{ fontSize: 10 }}
-          />
+          <Box sx={{ marginBottom: 1 }}>
+            <Typography sx={{ fontSize: "10px" }}>Something</Typography>
+            <LinearProgress
+              variant="determinate"
+              value={75}
+              color="inherit"
+              sx={{ mt: 0.5, height: 4, width: "100px" }}
+            />
+          </Box>
+        </ListItem>
+        <ListItem sx={{ padding: 0 }}>
+          <Box sx={{ marginBottom: 1 }}>
+            <Typography sx={{ fontSize: "10px" }}>Something</Typography>
+            <LinearProgress
+              variant="determinate"
+              value={75}
+              color="inherit"
+              sx={{ mt: 0.5, height: 4, width: "100px" }}
+            />
+          </Box>
         </ListItem>
       </List>
     </Box>
