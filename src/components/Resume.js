@@ -5,6 +5,7 @@ import {
   Container,
   createTheme,
   CssBaseline,
+  Grid,
   Stack,
   ThemeProvider,
   Typography,
@@ -13,6 +14,9 @@ import React from "react";
 import ContactBox from "./ContactBox";
 import ResumeTop from "./ResumeTop";
 import SkillsBox from "./SkillsBox";
+import ExperienceBox from "./ExperienceBox";
+import EducationBox from "./EducationBox";
+import About from "./About";
 // import About from "./About";
 
 const Resume = () => {
@@ -52,8 +56,30 @@ const Resume = () => {
           >
             <Container>
               <ResumeTop />
-              <ContactBox />
-              <SkillsBox />
+              <Grid
+                container
+                rowSpacing={1}
+                columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+              >
+                <Grid item xs={5}>
+                  <ContactBox />
+                  <SkillsBox />
+                </Grid>
+                <Grid item xs={2}>
+                  <Box
+                    sx={{
+                      height: "328px",
+                      backgroundColor: "#ede4dc",
+                      width: "6px",
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={5}>
+                  <ExperienceBox />
+                  <EducationBox />
+                </Grid>
+              </Grid>
+              <About />
             </Container>
           </Box>
 
