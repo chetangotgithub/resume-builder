@@ -1,4 +1,4 @@
-import { Autorenew, Download } from "@mui/icons-material";
+import React, { createRef } from "react";
 import {
   Box,
   Button,
@@ -10,14 +10,14 @@ import {
   ThemeProvider,
   Typography,
 } from "@mui/material";
-import React from "react";
+import { Autorenew, Download } from "@mui/icons-material";
+import Pdf from "react-to-pdf";
 import ContactBox from "./ContactBox";
 import ResumeTop from "./ResumeTop";
 import SkillsBox from "./SkillsBox";
 import ExperienceBox from "./ExperienceBox";
 import EducationBox from "./EducationBox";
 import About from "./About";
-// import About from "./About";
 
 const Resume = () => {
   const resumeTheme = createTheme({
@@ -25,6 +25,9 @@ const Resume = () => {
       fontFamily: "Lato",
     },
   });
+
+  const resumeContainerRef = createRef();
+
   return (
     <ThemeProvider theme={resumeTheme}>
       <Container>
@@ -46,6 +49,7 @@ const Resume = () => {
 
           {/* Resume Box */}
           <Box
+            ref={resumeContainerRef}
             sx={{
               background:
                 "linear-gradient(15deg, #0F2C33 0, #0F044C 20%, #ffffff 20%, #ffffff 75%, #0F044C 75%, #0F044C 100%);",
@@ -88,9 +92,17 @@ const Resume = () => {
             <Button variant="contained" endIcon={<Autorenew />}>
               Build New
             </Button>
-            <Button variant="outlined" endIcon={<Download />}>
-              Download
-            </Button>
+            <Pdf targetRef={resumeContainerRef} filename="your-resume.pdf">
+              {({ toPdf }) => (
+                <Button
+                  onClick={toPdf}
+                  variant="outlined"
+                  endIcon={<Download />}
+                >
+                  Download
+                </Button>
+              )}
+            </Pdf>
           </Stack>
         </Box>
       </Container>

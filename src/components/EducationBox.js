@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Avatar,
   Box,
   List,
   ListItem,
@@ -8,7 +7,7 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-import { Circle, LocationOn, Mail, Phone } from "@mui/icons-material";
+import { Circle } from "@mui/icons-material";
 
 const EducationBox = () => {
   return (
